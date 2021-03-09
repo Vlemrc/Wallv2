@@ -729,7 +729,8 @@ header {
       flex-flow: column;
       padding-top: 20px;
       max-width: 375px;
-      text-align: center; } }
+      text-align: center;
+      margin-left: -25px; } }
 
 .main_nav a,
 .main_nav a:visited {
@@ -807,13 +808,17 @@ nav ul {
   @media (max-width: 480px) {
     .spoil p {
       max-width: 375px;
-      padding: 5px 20px; } }
+      text-align: center;
+      padding-right: 30px; } }
 
 .spoil img {
   padding-bottom: 40px; }
   @media (max-width: 480px) {
     .spoil img {
-      padding-top: 30px; } }
+      padding-top: 30px;
+      width: 300px;
+      height: 285;
+      padding-left: 40px; } }
 
 @media (max-width: 480px) {
   .spoiler {
@@ -930,6 +935,9 @@ nav ul {
   background-color: white;
   padding: 5px 10px;
   border: 1px solid var(--secondary); }
+  @media (max-width: 480px) {
+    .btn-2 {
+      max-width: 375px; } }
 
 .btn-2:hover,
 .btn-2:focus,
