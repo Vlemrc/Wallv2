@@ -1,0 +1,714 @@
+@import "grid";
+@import "media-queries";
+@import "normalize";
+// ================ MAIN ================== //
+
+/* === ABSTRACTS === */
+
+/* boites */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    cursor:pointer;
+}
+
+ul {
+    padding-inline-start:0px;
+}
+
+/* clearfix */
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* images */
+
+img {
+    display: block;
+}
+/* ================================= */
+
+/* === VARIABLES === */
+
+:root
+{
+    --grey: #999;
+    --secondary: #cfb5ff;
+    --primary: #5226a5;
+}
+
+/* === GRILLES === */
+
+body
+{
+    margin: 0;
+}
+
+/*  */
+
+p, h1, h2, h3, h4, h5, h6, a {
+    margin: 0;
+}
+
+/* décalage vers la droite: push */
+.push-4
+{
+    margin-left: 320px;
+}
+/* ========================================== */
+/* === BOUTONS ET CALL TO ACTION */
+
+/* commun à tous les boutons  */
+.btn
+{
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-1 {
+    color:white;
+    background-color:var(--primary);
+    padding:10px 20px;
+    border-radius:20px;
+    font-weight:700;
+    font-size:14px;
+    z-index:1000;
+    text-transform: uppercase;
+}
+
+.btn-1:hover,
+.btn-1:focus,
+.btn-1:active 
+{
+  background-color:white;
+  border:2px solid var(--primary);
+  cursor:pointer;
+  color:var(--primary);
+}
+
+/* HEADING PRIMARY LEFT*/
+
+.heading_details {
+    text-align:left;
+    align-items:center;
+    @include xs {
+        padding-left:0px;
+    }
+  }
+  
+  .heading_details::before {
+    content:'';
+    display: block;
+    background: transparent no-repeat center /contain;
+    height:50px;
+    width:55.83px;
+    margin-right:10px;
+  }
+  
+  .heading {
+    padding-top:40px;
+    color: var(--primary);
+    font-size:40px;
+    padding-left: 10px;
+    font-weight: 700;
+    padding-bottom:40px;
+    text-transform: uppercase;
+    text-align: left;
+    @include xs {
+        padding-left:0;
+    }
+  }
+  
+  .heading::before {
+    background-image:url(../images/Logo/PictoWALLPurple90R.svg)
+  }
+
+/* HEADING PRIMARY RIGHT*/
+
+.heading-right_details {
+    text-align:left;
+    align-items:center;
+  }
+  
+  .heading-right_details::after {
+    content:'';
+    display: block;
+    background: transparent no-repeat center /contain;
+    height:50px;
+    width:55.83px;
+    margin-left:10px;
+  }
+  
+  .heading-right {
+    padding-top:40px;
+    color: var(--primary);
+    font-size:40px;
+    padding-left: 10px;
+    font-weight: 700;
+    padding-bottom:40px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  
+  .heading-right::after {
+    background-image:url(../images/Logo/PictoWALL180.svg)
+  }
+
+/* HEADING WHITE */
+
+.heading_details-white {
+    text-align:left;
+    align-items:center;
+  }
+  
+  .heading_details-white::before {
+    content:'';
+    display: block;
+    background: transparent no-repeat center /contain;
+    height:50px;
+    width:55.83px;
+    margin-right:10px;
+  }
+  
+  .heading-white {
+    padding-top:40px;
+    color: white;
+    font-size:40px;
+    padding-left: 10px;
+    font-weight: 700;
+    padding-bottom:40px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  
+  .heading-white::before {
+    background-image:url(../images/Logo/PictoWALLWhite90R.svg)
+  }
+
+/* HEADER */
+
+header {
+  background-color:var(--primary);
+  height:100px;
+  align-items:center;
+  @include xs {
+    height:250px;
+    max-width:375px;
+}
+}
+
+.logoheader {
+    @include xs {
+        padding-left:22px;
+    }
+}
+
+.main_nav {
+    align-items: center;
+    display:flex;
+    flex-wrap:wrap;
+    @include xs {
+      flex-flow: column;
+      padding-top:20px;
+      max-width:375px;
+      text-align:center;
+  }
+}
+
+.main_nav a,
+.main_nav a:visited
+{
+    color: white;
+    font-size:20px;
+    letter-spacing: .120;
+    text-decoration: none;
+}
+.main_nav a:hover,
+.main_nav a:focus,
+.main_nav a:active 
+{
+  cursor:pointer;
+  border-bottom:1px solid white;
+}
+nav ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    @include xs {
+      flex-flow: column;
+  }
+}
+
+.navbar {
+    display:flex;
+}
+
+/* SLIDER DOFLAMINGO */
+
+.bg-1 {
+    background-image:url(../images/Index/Doflamingoaccueil.jpg);
+    height:550px;
+}
+
+.slider h3 {
+    font-size:30px;
+    color:var(--primary);
+    text-transform: uppercase;
+    text-shadow: 3px 3px var(--secondary);
+    padding-top:110px;
+    padding-bottom:10px;
+    @include xs {
+      font-size:25px;
+      text-align:center;
+      max-width:375px;
+  }
+}
+
+.slider h1 {
+    font-size:60px;
+    color:var(--primary);
+    text-transform: uppercase;
+    text-shadow: 3px 3px var(--secondary);
+    @include xs {
+        max-width:375px;
+        font-size:42px;
+        text-align:center;
+        padding:20px;
+    }
+}
+
+/* SPOIL */
+
+.spoil {
+    padding-top:40px;
+    @include xs {
+      flex-flow: column;
+  }
+}
+
+.spoil h2 {
+    @include xs {
+        font-size:30px;
+        max-width:375px;
+        text-align:center;
+    }
+}
+
+.spoil p {
+    color:var(--primary);
+    font-weight: 300;
+    font-size:20px;
+    padding-bottom:25px;
+    @include xs {
+        max-width:375px;
+        padding:5px 20px;   
+    }
+}
+
+.spoil img {
+    padding-bottom:40px;
+    @include xs {
+        padding-top:30px;
+    }
+}
+
+.spoiler {
+  @include xs {
+    flex-flow: column;
+    text-align:center;
+}
+}
+
+/* Promo PC */
+.bg-2 {
+    background-image: url(../images/Index/itachikisamePC@2x.jpg);
+    height:600px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.promopc h3 {
+    color:white;
+    font-size:30px;
+    text-transform: uppercase;
+    padding-top:85px;
+    padding-bottom:10px;
+    @include xs {
+        font-size:30px;
+        max-width:375px;
+        text-align:center;
+    }
+}
+
+.promopc h1 {
+    color:white;
+    font-size:60px;
+    text-transform: uppercase;
+    padding-bottom:40px;
+    @include xs {
+        font-size:40px;
+        max-width:375px;
+        text-align:center;
+        padding:10px 50px 50px 50px;
+    }
+}
+
+.promopc a {
+    color:white;
+    font-size:24px;
+    font-weight:700;
+    background-color:var(--primary);
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration: none;
+    @include xs {
+        margin-left:70px;
+        max-width:375px;
+    }
+}
+.promopc a:hover,
+.promopc a:focus,
+.promopc a:active 
+{
+  background-color:white;
+  border:2px solid var(--primary);
+  cursor:pointer;
+  color:var(--primary);
+}
+/* MINGO PROMO */
+
+.mingopromo h2 {
+    margin-bottom:-30px;
+    @include xs {
+        font-size:20px;
+    }
+}
+
+.centrer {
+    display:flex;
+    justify-content: center;
+    @include xs {
+        max-width:375px;
+        text-align:center;
+    }
+}
+
+
+.centrer2 {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.mingoborder ul {
+    border-top:3px solid var(--primary);
+
+    padding-top:30px;
+    @include xs {
+      flex-flow: column;
+      justify-content: center;
+      border:none;
+  }
+}
+
+.mingopromo img {
+    z-index:5;
+    border: 1px solid black;
+}
+
+.redirection {
+    position: absolute;
+    padding-top:20px;
+    padding-left: 53px;
+    padding-right: 20px;
+    bottom:50;
+    left: 50;
+}
+
+.redirection a {
+    text-decoration: none;
+}
+
+.mingopromo h3 {
+    padding-bottom:10px;
+}
+
+.mingopromo p {
+    font-size:14px;
+}
+
+.btn-2 {
+    font-size:20px;
+    font-weight:700;
+    color:var(--primary);
+    background-color:white;
+    padding:5px 10px;
+    border:1px solid var(--secondary);
+    @include xs {
+        max-width:375px;
+    }
+}
+
+.btn-2:hover,
+.btn-2:focus,
+.btn-2:active {
+    opacity:80%;
+    border:1px solid var(--primary);
+}
+/* ANIME DU MOMENT */
+
+.animemoment {
+    background-image: url(../images/Index/ItadoriAoifight.jpg);
+    height:600px;
+}
+
+.moment_content {
+    height:425px;
+    background-color: rgba(82, 38, 165, .6);
+    border-radius:20px;
+}
+
+.moment_content h1 {
+    text-align:center;
+    color:white;
+    text-transform: uppercase;
+    font-size:60px;
+    font-style:italic;
+    margin-top:-35px;
+}
+
+.moment_content p {
+    color:white;
+    text-align:center;
+    font-weight:300;
+    font-size:20px;
+    padding-top:15px; 
+}
+
+/* FOCUS */
+
+.focus {
+    background-color:#EDEDED;
+}
+
+.focus_container {
+  @include xs {
+    flex-flow: column-reverse;
+    text-align:center;
+}
+}
+
+.oeuvre {
+    height:290px;
+    width: 290px;
+    @include xs {
+      height:150px;
+      width:150px;
+  }
+}
+
+.focus_content {
+    height:610px;
+    width:610px;
+    background-color:white;
+    border-radius:5px;
+    @include xs {
+      width:340px;
+      height:750px;
+      margin-top:80px;
+  }
+}
+
+
+.ppfocus {
+  border-radius:50%;
+  height:150px;
+  width:150px;
+}
+
+
+.focus_content h4 {
+    color:black;
+    font-size:26px;
+    padding-top:20px;
+    text-align:center;
+}
+
+.author {
+    color:var(--grey);
+    font-size:14px;
+    font-style:italic;
+    font-weight:300px;
+    text-align:center;
+    padding-top:10px;
+}
+
+.focus_speech {
+    padding-top:40px;
+    @include xs {
+      padding:0px 20px;
+      padding-top:20px;
+  }
+}
+
+.socialshop {
+    height:290px;
+    width:290px;
+    background-color:white;
+    border-radius:5px;
+}
+
+.socialshop a:hover,
+.socialshop a:focus,
+.socialshop a:active {
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+.socialshop h2 {
+    font-size:40px;
+    padding-top:30px;
+}
+
+.date {
+    color:var(--grey);
+    font-size:14px;
+    font-style:italic;
+    font-weight:300px;
+    text-align:center;
+    padding-top:50px;
+}
+
+/* FOOTER */
+footer {
+    height:150px;
+    background-color:var(--primary);
+}
+
+.footer_content {
+    align-items:center;
+    padding-top:20px;
+}
+
+.footer_content p {
+    text-align:center;
+    justify-content: center;
+    color:white;
+    font-weight:300;
+    font-size:20px;
+    padding-top:10px;
+    padding-left:150px;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+/* ========== COMPUTER ========== */
+
+.bg-3 {
+    background-image:url(../images/Index/PhonesWallp_@2x.jpg);
+    height:600px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.himejima h1 {
+    padding-top:120px;
+}
+
+.himejima p {
+    padding-top:10px;
+    color:var(--primary);
+    font-size:20px;
+    text-shadow: 2px 2px var(--secondary);
+    line-height:28px;
+    padding-bottom:20px;
+}
+
+.himejima a:hover,
+.himejima a:focus,
+.himejima a:active {
+    transform: scale(1.5);
+    transition: .2s ease-in-out;
+}
+
+/* ======== FOCUS ========= */
+
+.bg-4 {
+    background-image: url(../images/focus/ZoroFocusBG_@2x.jpg);
+    height:550px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.zorobg h1 {
+    padding-top:110px;
+}
+
+.zorobg p {
+    padding-top:10px;
+    color:var(--primary);
+    font-size:20px;
+    text-shadow: 2px 2px var(--secondary);
+    line-height:28px;
+    padding-bottom:30px;
+}
+/* ========= COMPUTER ========= */
+.bg-5 {
+    background-image:url(../images/computer/ComputerSlider@2x.jpg);
+    height:550px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.computerpres a {
+    text-decoration: none;
+}
+
+.computerpres a:hover,
+.computerpres a:active,
+.computerpres a:focus {
+    transform: scale(1.2);
+    transition: .2s ease-in-out;
+}
+
+.computerpres img {
+    height:318px;
+}
+
+/* PHONES */
+
+.bg-6 {
+    height:550px;
+    background-image:url(../images/phones/PhonesLivaiBG.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+.phonepres img {
+    height:450px;
+}
+
+.phonepres a {
+    text-decoration: none;
+}
+
+.phonepres a:hover,
+.phonepres a:active,
+.phonepres a:focus {
+    transform: scale(1.2);
+    transition: .2s ease-in-out;
+}
