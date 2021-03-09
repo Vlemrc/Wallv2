@@ -839,9 +839,9 @@ nav ul {
   background-size: cover; }
   @media (max-width: 480px) {
     .bg-2 {
-      background-attachment: none;
-      background-position: none;
-      background-size: none; } }
+      background-attachment: unset;
+      background-position: unset;
+      background-size: unset; } }
 
 .promopc h3 {
   color: white;
@@ -896,7 +896,10 @@ nav ul {
   margin-bottom: -30px; }
   @media (max-width: 480px) {
     .mingopromo h2 {
-      font-size: 20px; } }
+      font-size: 20px;
+      max-width: 375px;
+      text-align: center;
+      margin-left: -30px; } }
 
 .centrer {
   display: flex;
@@ -918,7 +921,8 @@ nav ul {
     .mingoborder ul {
       flex-flow: column;
       justify-content: center;
-      border: none; } }
+      border: none;
+      padding-left: 65px; } }
 
 .mingopromo img {
   z-index: 5;
@@ -950,7 +954,8 @@ nav ul {
   border: 1px solid var(--secondary); }
   @media (max-width: 480px) {
     .btn-2 {
-      max-width: 375px; } }
+      max-width: 375px;
+      margin-left: -30px; } }
 
 .btn-2:hover,
 .btn-2:focus,
@@ -962,6 +967,14 @@ nav ul {
 .animemoment {
   background-image: url(../images/Index/ItadoriAoifight.jpg);
   height: 600px; }
+  @media (max-width: 480px) {
+    .animemoment {
+      margin-right: -32px; } }
+
+@media (max-width: 480px) {
+  .animemoment h2 {
+    font-size: 30px;
+    margin-left: -12px; } }
 
 .moment_content {
   height: 425px;
@@ -975,6 +988,10 @@ nav ul {
   font-size: 60px;
   font-style: italic;
   margin-top: -35px; }
+  @media (max-width: 480px) {
+    .moment_content h1 {
+      font-size: 40px;
+      margin-left: -7px; } }
 
 .moment_content p {
   color: white;
@@ -982,6 +999,13 @@ nav ul {
   font-weight: 300;
   font-size: 20px;
   padding-top: 15px; }
+  @media (max-width: 480px) {
+    .moment_content p {
+      font-size: 18px;
+      padding: 18px; } }
+
+.responsive_moment_a {
+  margin-top: -12px; }
 
 /* FOCUS */
 .focus {
