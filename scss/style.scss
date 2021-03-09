@@ -258,6 +258,9 @@ nav ul
 .bg-1 {
     background-image:url(../images/Index/Doflamingoaccueil.jpg);
     height:550px;
+    @include xs {
+        margin-left:-230px;
+    }
 }
 
 .slider h3 {
@@ -271,7 +274,7 @@ nav ul
       font-size:25px;
       text-align:center;
       max-width:375px;
-      margin-left:-20px;
+      margin-left:210px;
   }
 }
 
@@ -285,7 +288,7 @@ nav ul
         font-size:42px;
         text-align:center;
         padding:20px;
-        margin-left:-20px;
+        margin-left:210px;
     }
 }
 
@@ -342,6 +345,11 @@ nav ul
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    @include xs {
+        background-attachment: none;
+        background-position: none;
+        background-size: none;
+    }
 }
 
 .promopc h3 {
