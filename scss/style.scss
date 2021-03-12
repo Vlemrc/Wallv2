@@ -372,7 +372,6 @@ nav ul
     justify-content: center;
 }
 
-
 .centrer2 {
     display:flex;
     justify-content: center;
@@ -728,10 +727,21 @@ footer a:active {
     background-image:url(../images/phones/PhonesLivaiBG.png);
     background-position: center center;
     background-size: cover;
+    @include xs {
+        margin-left:-220px;
+    }
 }
 
-.phonepres img {
-    height:450px;
+.slider p {
+    @include xs {
+        margin-left:220px;
+    }
+}
+
+.slider a {
+    @include xs {
+        margin-left:220px;
+    }
 }
 
 .phonepres a {
@@ -743,4 +753,8 @@ footer a:active {
 .phonepres a:focus {
     transform: scale(1.2);
     transition: .2s ease-in-out;
+}
+
+.phonepres img {
+    height:548px;
 }

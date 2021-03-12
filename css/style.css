@@ -1256,9 +1256,17 @@ footer a:active {
   background-image: url(../images/phones/PhonesLivaiBG.png);
   background-position: center center;
   background-size: cover; }
+  @media (max-width: 480px) {
+    .bg-6 {
+      margin-left: -220px; } }
 
-.phonepres img {
-  height: 450px; }
+@media (max-width: 480px) {
+  .slider p {
+    margin-left: 220px; } }
+
+@media (max-width: 480px) {
+  .slider a {
+    margin-left: 220px; } }
 
 .phonepres a {
   text-decoration: none; }
@@ -1268,3 +1276,6 @@ footer a:active {
 .phonepres a:focus {
   transform: scale(1.2);
   transition: .2s ease-in-out; }
+
+.phonepres img {
+  height: 548px; }
