@@ -98,9 +98,6 @@ p, h1, h2, h3, h4, h5, h6, a {
 .heading_details {
     text-align:left;
     align-items:center;
-    @include xs {
-        padding-left:0px;
-    }
   }
   
   .heading_details::before {
@@ -122,7 +119,7 @@ p, h1, h2, h3, h4, h5, h6, a {
     text-transform: uppercase;
     text-align: left;
     @include xs {
-        padding-left:0;
+        font-size:30px;
     }
   }
   
@@ -199,28 +196,18 @@ header {
   height:100px;
   align-items:center;
   @include xs {
-    height:250px;
-    max-width:375px;
-}
+      height:240px;
+  }
 }
 
 .logoheader {
-    @include xs {
-        padding-left:22px;
-    }
+    padding-left:10px;
 }
 
 .main_nav {
     align-items: center;
     display:flex;
     flex-wrap:wrap;
-    @include xs {
-      flex-flow: column;
-      padding-top:20px;
-      max-width:375px;
-      text-align:center;
-      margin-left:-25px;
-  }
 }
 
 .main_nav a,
@@ -245,8 +232,12 @@ nav ul
     padding: 0;
     font-weight: 300;
     @include xs {
-      flex-flow: column;
-  }
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+        padding-left:120px;
+        padding-top:13px;
+    }
 }
 
 .navbar {
@@ -259,7 +250,7 @@ nav ul
     background-image:url(../images/Index/Doflamingoaccueil.jpg);
     height:550px;
     @include xs {
-        margin-left:-230px;
+    margin-left:-220px;
     }
 }
 
@@ -271,11 +262,9 @@ nav ul
     padding-top:110px;
     padding-bottom:10px;
     @include xs {
-      font-size:25px;
-      text-align:center;
-      max-width:375px;
-      margin-left:210px;
-  }
+        text-align:center;
+        margin-left:220px;
+    }
 }
 
 .slider h1 {
@@ -284,11 +273,9 @@ nav ul
     text-transform: uppercase;
     text-shadow: 3px 3px var(--secondary);
     @include xs {
-        max-width:375px;
-        font-size:42px;
         text-align:center;
-        padding:20px;
-        margin-left:210px;
+        font-size:50px;
+        margin-left:220px;
     }
 }
 
@@ -297,45 +284,26 @@ nav ul
 .spoil {
     padding-top:40px;
     @include xs {
-      flex-flow: column;
-  }
-}
-
-.spoil h2 {
-    @include xs {
-        font-size:30px;
-        max-width:375px;
-        text-align:center;
+        padding-top:0px;
     }
 }
-
 .spoil p {
     color:var(--primary);
     font-weight: 300;
     font-size:20px;
     padding-bottom:25px;
     @include xs {
-        max-width:375px;
         text-align:center;
-        padding-right:30px;
     }
 }
 
 .spoil img {
     padding-bottom:40px;
     @include xs {
-        padding-top:30px;
-        width:300px;
-        height:285;
-        padding-left:40px;
+        width:294px;
+        height:280px;
+        padding-left:50px;
     }
-}
-
-.spoiler {
-  @include xs {
-    flex-flow: column;
-    text-align:center;
-}
 }
 
 /* Promo PC */
@@ -345,11 +313,6 @@ nav ul
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    @include xs {
-        background-attachment:unset;
-        background-position:unset;
-        background-size:unset;
-    }
 }
 
 .promopc h3 {
@@ -359,10 +322,7 @@ nav ul
     padding-top:85px;
     padding-bottom:10px;
     @include xs {
-        font-size:30px;
-        max-width:375px;
         text-align:center;
-        margin-left:-20px;
     }
 }
 
@@ -372,11 +332,8 @@ nav ul
     text-transform: uppercase;
     padding-bottom:40px;
     @include xs {
-        font-size:40px;
-        max-width:375px;
+        font-size:60px;
         text-align:center;
-        padding:10px 50px 50px 50px;
-        margin-left:-20px;
     }
 }
 
@@ -390,8 +347,6 @@ nav ul
     text-decoration: none;
     @include xs {
         margin-left:70px;
-        max-width:375px;
-        margin-left:60px;
     }
 }
 .promopc a:hover,
@@ -409,19 +364,12 @@ nav ul
     margin-bottom:-30px;
     @include xs {
         font-size:20px;
-        max-width:375px;
-        text-align:center;
-        margin-left:-30px;
     }
 }
 
 .centrer {
     display:flex;
     justify-content: center;
-    @include xs {
-        max-width:375px;
-        text-align:center;
-    }
 }
 
 
@@ -433,12 +381,6 @@ nav ul
 .mingoborder ul {
     border-top:3px solid var(--primary);
     padding-top:30px;
-    @include xs {
-      flex-flow: column;
-      justify-content: center;
-      border:none;
-      padding-left:65px;
-  }
 }
 
 .mingopromo img {
@@ -457,6 +399,12 @@ nav ul
 
 .redirection a {
     text-decoration: none;
+    @include xs {
+        padding:15px 30px;
+        font-size:24px;
+        border-radius:30px;
+        margin-left:35px;
+    }
 }
 
 .mingopromo h3 {
@@ -474,10 +422,6 @@ nav ul
     background-color:white;
     padding:5px 10px;
     border:1px solid var(--secondary);
-    @include xs {
-        max-width:375px;
-        margin-left:-30px;
-    }
 }
 
 .btn-2:hover,
@@ -491,22 +435,18 @@ nav ul
 .animemoment {
     background-image: url(../images/Index/ItadoriAoifight.jpg);
     height:600px;
-    @include xs {
-        margin-right:-32px;
-    }
-}
-
-.animemoment h2 {
-    @include xs {
-        font-size:30px;
-        margin-left:-12px;
-    }
 }
 
 .moment_content {
     height:425px;
     background-color: rgba(82, 38, 165, .6);
     border-radius:20px;
+}
+
+.moment_content h2 {
+    @include xs {
+        font-size:24px;
+    }
 }
 
 .moment_content h1 {
@@ -517,8 +457,7 @@ nav ul
     font-style:italic;
     margin-top:-35px;
     @include xs {
-        font-size:40px;
-        margin-left:-7px;
+        font-size:34px;
     }
 }
 
@@ -530,12 +469,16 @@ nav ul
     padding-top:15px; 
     @include xs {
         font-size:18px;
-        padding:18px;
+        padding:0px 10px;
+        padding-top:20px;
     }
 }
 
 .responsive_moment_a {
-    margin-top:-12px;
+    margin-top:50px;
+    @include xs {
+        margin-top:60px;
+    }
 }
 
 /* FOCUS */
@@ -545,19 +488,29 @@ nav ul
 }
 
 .focus_container {
-  @include xs {
-    flex-flow: column-reverse;
-    text-align:center;
+    @include xs {
+        flex-direction: column-reverse;
+    }
 }
+
+.focus_left {
+    margin-left:80px;
+    @include xs {
+        margin-left:0px;
+        padding-left:28px;
+    }
+}
+
+.focus_right {
+    margin-left:-80px;
+    @include xs {
+        margin-left:0px;
+    }
 }
 
 .oeuvre {
     height:290px;
     width: 290px;
-    @include xs {
-      height:150px;
-      width:150px;
-  }
 }
 
 .focus_content {
@@ -566,12 +519,17 @@ nav ul
     background-color:white;
     border-radius:5px;
     @include xs {
-      width:340px;
-      height:750px;
-      margin-top:80px;
-  }
+        height:none;
+        width:unset;
+        margin-top:70px;
+    }
 }
 
+.textcenter {
+    @include xs {
+    padding-left:60px;
+    }
+  }
 
 .ppfocus {
   border-radius:50%;
@@ -599,9 +557,10 @@ nav ul
 .focus_speech {
     padding-top:40px;
     @include xs {
-      padding:0px 20px;
-      padding-top:20px;
-  }
+        font-size:14px;
+        padding:0px 20px;
+        padding-top:30px;
+        }
 }
 
 .socialshop {
@@ -609,6 +568,9 @@ nav ul
     width:290px;
     background-color:white;
     border-radius:5px;
+    @include xs {
+        margin-bottom:60px;
+    }
 }
 
 .socialshop a:hover,
@@ -632,15 +594,37 @@ nav ul
     padding-top:50px;
 }
 
+.vitrine {
+    @include xs {
+        display:flex;
+        text-align:center;
+        justify-content: center;
+    }
+}
+
 /* FOOTER */
 footer {
     height:150px;
     background-color:var(--primary);
+    @include xs {
+        height:270px;
+    }
+}
+
+.logofooter {
+    padding-left:30px;
 }
 
 .footer_content {
     align-items:center;
     padding-top:20px;
+}
+
+.social_footer {
+    @include xs {
+    padding-left:100px;
+    padding-top:20px;
+    }
 }
 
 .footer_content p {
@@ -651,6 +635,10 @@ footer {
     font-size:20px;
     padding-top:10px;
     padding-left:150px;
+    @include xs {
+        padding-left:0px;
+        padding:30px;
+    }
 }
 
 footer a:hover,
