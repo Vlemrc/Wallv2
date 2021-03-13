@@ -464,6 +464,12 @@ min-height:534.61px;
   max-height:534.61px;
 }
 
+.px525 {
+  width:525.78px;
+  @include xs {
+    width:150px;
+  }
+}
 /* ZOOM */
 
 .zoom:hover { 

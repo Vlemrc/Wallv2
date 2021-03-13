@@ -341,6 +341,12 @@ ul {
 .px451 {
   max-height: 534.61px; }
 
+.px525 {
+  width: 525.78px; }
+  @media (max-width: 480px) {
+    .px525 {
+      width: 150px; } }
+
 /* ZOOM */
 .zoom:hover {
   transform: scale(1.2);
