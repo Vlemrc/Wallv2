@@ -289,6 +289,12 @@ ul {
   }
 }
 
+.m600 {
+  @include xs {
+    margin-left:600px;
+}
+}
+
 /* PADDING */
 
 .p-10 {
@@ -323,7 +329,12 @@ ul {
 }
 .p-80 {
   padding-top:80px;
+  @include xs {
+    padding-top:40px;
+  }
 }
+
+
 
 .pr-20 {
   padding-right:40px;
@@ -446,11 +457,11 @@ ul {
 
 /* TAILLE IMAGE */
 .px450 {
-min-height:450px;
+min-height:534.61px;
 }
 
 .px451 {
-  max-height:450px;
+  max-height:534.61px;
 }
 
 /* ZOOM */

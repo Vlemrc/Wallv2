@@ -647,17 +647,24 @@ footer a:active {
     transition: .2s ease-in-out;
 }
 
-/* ========== COMPUTER ========== */
+/* ========== MY WORKS ========== */
 
 .bg-3 {
     background-image:url(../images/Index/PhonesWallp_@2x.jpg);
     height:600px;
     background-position: center center;
     background-size: cover;
+    @include xs {
+        margin-left:-600px;
+    }
 }
 
 .himejima h1 {
     padding-top:120px;
+    @include xs {
+        margin-left:600px;
+        padding-top:90px;
+    }
 }
 
 .himejima p {
@@ -667,6 +674,10 @@ footer a:active {
     text-shadow: 2px 2px var(--secondary);
     line-height:28px;
     padding-bottom:20px;
+    @include xs {
+        margin-left:600px;
+        text-align:center;
+    }
 }
 
 .himejima a:hover,
@@ -676,27 +687,6 @@ footer a:active {
     transition: .2s ease-in-out;
 }
 
-/* ======== FOCUS ========= */
-
-.bg-4 {
-    background-image: url(../images/focus/ZoroFocusBG_@2x.jpg);
-    height:550px;
-    background-position: center center;
-    background-size: cover;
-}
-
-.zorobg h1 {
-    padding-top:110px;
-}
-
-.zorobg p {
-    padding-top:10px;
-    color:var(--primary);
-    font-size:20px;
-    text-shadow: 2px 2px var(--secondary);
-    line-height:28px;
-    padding-bottom:30px;
-}
 /* ========= COMPUTER ========= */
 .bg-5 {
     background-image:url(../images/computer/ComputerSlider@2x.jpg);
@@ -718,6 +708,52 @@ footer a:active {
 
 .computerpres img {
     height:318px;
+    @include xs {
+        height:100px;
+    }
+}
+
+.computerpres h2 {
+    @include xs {
+    font-size:18px;
+    }
+}
+
+/* ======== FOCUS ========= */
+
+.bg-4 {
+    background-image: url(../images/focus/ZoroFocusBG_@2x.jpg);
+    height:550px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.zorobg h1 {
+    padding-top:110px;
+    @include xs {
+        margin-left:0px;
+        padding-top:50px;
+        padding-bottom:20px;
+    }
+}
+
+.zorobg p {
+    padding-top:10px;
+    color:var(--primary);
+    font-size:20px;
+    text-shadow: 2px 2px var(--secondary);
+    line-height:28px;
+    padding-bottom:30px;
+    @include xs {
+        margin-left:17px;
+        text-align:center;
+    }
+}
+
+.zorobg a {
+    @include xs {
+        margin-left:0px;
+    }
 }
 
 /* PHONES */
@@ -732,15 +768,29 @@ footer a:active {
     }
 }
 
-.slider p {
+.livaibg h1 {
+    @include xs {
+        font-size:50px;
+        margin-left:220px;
+    }
+}
+
+.livaibg p {
     @include xs {
         margin-left:220px;
     }
 }
 
-.slider a {
+.livaibg a {
     @include xs {
-        margin-left:220px;
+        margin-left:280px;
+
+    }
+}
+
+.phonepres h2 {
+    @include xs {
+    font-size:18px;
     }
 }
 
@@ -757,4 +807,7 @@ footer a:active {
 
 .phonepres img {
     height:548px;
+    @include xs {
+        height:unset;
+    }
 }
