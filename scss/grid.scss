@@ -380,6 +380,11 @@ ul {
   width: 100%;
   margin-top:0px;
   margin-left:0px;
+  @include xs {
+    display:unset;
+    overflow: unset;
+    position: unset;
+  }
 }
 
 .hover-img h3 {
@@ -389,6 +394,10 @@ ul {
 .hover-img * {
   box-sizing: border-box;
   transition: all 0.45s ease;
+  @include xs {
+    box-sizing: unset;
+    transition: unset;
+  }
 }
 
 .hover-img:before,
@@ -406,12 +415,24 @@ ul {
   z-index: 1;
   opacity: 0;
   transform: scaleY(2);
+  @include xs {
+    border-top:unset;
+    background-color: unset;
+    border-bottom: unset;
+    position: unset;
+    z-index: unset;
+    transition: unset;
+  }
 }
 
 .hover-img img {
   vertical-align: top;
   max-width: 100%;
   backface-visibility: hidden;
+  @include xs {
+    vertical-align: unset;
+    backface-visibility: unset;
+  }
 }
 
 .hover-img figcaption {
@@ -433,6 +454,11 @@ ul {
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
+  @include xs {
+    position:unset;
+    display:unset;
+    
+  }
 }
 
 .hover-img:hover:before,

@@ -270,6 +270,11 @@ ul {
   width: 100%;
   margin-top: 0px;
   margin-left: 0px; }
+  @media (max-width: 480px) {
+    .hover-img {
+      display: unset;
+      overflow: unset;
+      position: unset; } }
 
 .hover-img h3 {
   padding-bottom: 5px; }
@@ -277,6 +282,10 @@ ul {
 .hover-img * {
   box-sizing: border-box;
   transition: all 0.45s ease; }
+  @media (max-width: 480px) {
+    .hover-img * {
+      box-sizing: unset;
+      transition: unset; } }
 
 .hover-img:before,
 .hover-img:after {
@@ -293,11 +302,24 @@ ul {
   z-index: 1;
   opacity: 0;
   transform: scaleY(2); }
+  @media (max-width: 480px) {
+    .hover-img:before,
+    .hover-img:after {
+      border-top: unset;
+      background-color: unset;
+      border-bottom: unset;
+      position: unset;
+      z-index: unset;
+      transition: unset; } }
 
 .hover-img img {
   vertical-align: top;
   max-width: 100%;
   backface-visibility: hidden; }
+  @media (max-width: 480px) {
+    .hover-img img {
+      vertical-align: unset;
+      backface-visibility: unset; } }
 
 .hover-img figcaption {
   position: absolute;
@@ -318,6 +340,10 @@ ul {
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase; }
+  @media (max-width: 480px) {
+    .hover-img figcaption {
+      position: unset;
+      display: unset; } }
 
 .hover-img:hover:before,
 .hover-img:hover:after {
